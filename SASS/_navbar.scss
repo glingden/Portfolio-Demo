@@ -1,0 +1,54 @@
+
+
+/* || -- Nagivation-bar section --*/
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+    align-items: center;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 10;
+    color: black;
+    &__list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style-type: none;
+        column-gap: 25px;
+        /*flex-grow: 1: */    
+    }
+    /*  || Incase you use figure
+    &__logo {
+        height: 2rem;
+        width: 4rem;
+        animation: transform 4s;
+    }
+    &__logo:hover {
+        transform: scale(2.1);
+    }
+    */
+   
+    &__link{
+        text-decoration:none;
+        color: #302f2d;
+    }
+
+    &__link:hover{
+        color: coral;
+    }
+    p:hover{
+        color: coral;
+    }
+}
+  
+
+
+/*\\ Responsive */
+@media only screen and (max-width:768px) {
+    .nav{
+        display: none;
+      }
+}

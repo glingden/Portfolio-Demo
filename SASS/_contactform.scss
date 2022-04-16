@@ -1,0 +1,45 @@
+/*-- Contact form --*/
+.section5{
+  margin-top: 8rem;
+}
+.section5__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin: 5% 32% 5%;
+  }
+  
+  .section5__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 2rem;
+    width: 100%;
+    border: 2px gainsboro solid;
+    border-radius: 5px;
+  }
+  
+  .section5__textarea {
+    height: 10rem;
+    width: 100%;
+    border: 2px gainsboro solid;
+    border-radius: 0.3rem;
+  }
+  
+  .section5__form button {
+    padding: 3px;
+    background-color: white;
+    height: 5vh;
+    width: 15vh;
+  }
+  
+  .section5__form button:hover {
+    background-color: $hover-color;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .section5__form {
+      margin: 5%;
+    }
+  }
