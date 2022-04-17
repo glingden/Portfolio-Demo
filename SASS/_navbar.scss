@@ -1,25 +1,52 @@
 
 
+
 /* || -- Nagivation-bar section --*/
+
 .nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;  
     align-items: center;
-    margin-right: 2rem;
-    margin-left: 2rem;
-    font-size: 20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 2rem;
+    font-size: 1.5rem;
+    font-family:$default-font-family;
     font-weight: 10;
-    color: black;
-    &__list{
+    padding: 0.5rem 0;
+
+
+    &__menu{
+        position: absolute;
+        top: 3rem;
+        right: 2rem;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        row-gap: 0.2rem;
+      
+
+        .nav__bar{
+            height:40px;
+            width: 100%;
+            background-color:black;
+            border-radius: px;
+        }
+
+    }
+
+
+    &__ul{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: safe;
         list-style-type: none;
-        column-gap: 25px;
+        column-gap: 15px;
+        margin-right: 0rem;
+    }  
         /*flex-grow: 1: */    
-    }
+
     /*  || Incase you use figure
     &__logo {
         height: 2rem;
@@ -28,27 +55,71 @@
     }
     &__logo:hover {
         transform: scale(2.1);
-    }
-    */
+    }*/
    
-    &__link{
+    .nav__link{
         text-decoration:none;
-        color: #302f2d;
+        color: black;
     }
 
-    &__link:hover{
-        color: coral;
+    .nav__link:hover{
+        color: $hover-color;
     }
+
+    p{
+        color: black;
+    }
+
     p:hover{
-        color: coral;
+        color: $hover-color;
     }
+    
 }
-  
+   
 
 
 /*\\ Responsive */
 @media only screen and (max-width:768px) {
     .nav{
-        display: none;
-      }
+        flex-direction: column;
+        align-items: flex-start;
+        
+        &__menu{
+            display: flex;
+            
+            }
+
+        &__item{
+            display: none;
+            width: 100%;
+        }
+        
+        &__ul{
+            flex-direction: column;
+            width: 100%;
+
+        }
+
+        &__li{
+            text-align: left ;
+            background-color: rgb(196, 116, 128);
+            padding: 0.3rem;
+            border-radius: 5px;
+            margin-left: -40px;
+            
+            .nav__link{
+            padding: 0.5rem 1 rem;
+            }
+        }
+
+        &__li:hover{
+            background-color: rgb(158, 80, 88);
+        }
+
+        &__item.active{
+            display: flex;
+        }
+         
+    }
+
 }
